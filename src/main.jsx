@@ -1052,10 +1052,16 @@ function App() {
                   key={job.company}
                   className="experience-row reveal"
                   open={i === 0}
+                  style={{ "--brand-color": job.brandColor, "--logo-delay": `${i * -1.3}s` }}
                 >
                   <summary>
                     <span className="mono job-number">0{i + 1}</span>
-                    <span>
+                    <span className="company-logo-tile" aria-hidden="true">
+                      <span className="company-logo-float">
+                        <img src={`/assets/companies/${job.logo}`} alt="" loading="lazy" width="160" height="90" />
+                      </span>
+                    </span>
+                    <span className="job-heading">
                       <small>{job.date}</small>
                       <h3>{job.company}</h3>
                       <p>{job.role}</p>
@@ -1065,6 +1071,9 @@ function App() {
                   <div className="job-detail">
                     <p>{job.copy}</p>
                     <span className="mono">{job.tech}</span>
+                    <a className="company-site" href={job.website} target="_blank" rel="noreferrer">
+                      Visit {job.company} <ArrowUpRight size={14} />
+                    </a>
                   </div>
                 </details>
               ))}

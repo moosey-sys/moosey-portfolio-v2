@@ -117,6 +117,9 @@ export const projects = [
 export const experiences = [
   {
     company: "CB Bank",
+    logo: "cb-bank.png",
+    website: "https://www.cbbank.com.mm/en",
+    brandColor: "#c69a36",
     role: "Senior Assistant Associate System Engineer",
     date: "Aug 2026 — Present",
     type: "Banking infrastructure & cloud",
@@ -125,6 +128,9 @@ export const experiences = [
   },
   {
     company: "NTT DATA Myanmar",
+    logo: "ntt-data.png",
+    website: "https://www.infonttdatamyanmar.com.mm/",
+    brandColor: "#0072bc",
     role: "Junior System Engineer",
     date: "Aug 2025 — Jul 2026",
     type: "Enterprise systems & networking",
@@ -133,6 +139,9 @@ export const experiences = [
   },
   {
     company: "Tiny Equations",
+    logo: "tiny-equations.png",
+    website: "https://www.tinyeqn.com/",
+    brandColor: "#63864b",
     role: "AI Engineer · Part-time",
     date: "Apr 2026 — Present",
     type: "AI-powered learning",
@@ -141,6 +150,9 @@ export const experiences = [
   },
   {
     company: "Candellar",
+    logo: "candellar.png",
+    website: "https://www.candellarsg.com/",
+    brandColor: "#d8874b",
     role: "AI Educator · Part-time",
     date: "Apr 2026 — Present",
     type: "Technology education",
