@@ -17,7 +17,7 @@ Node 22 recommended. `npm run build` produces `dist/`. Vercel detects Vite and d
 
 ## Publish
 
-Create **moosey-sys/moosey-portfolio**, push these source files, then import the repository in Vercel. Framework: Vite; build: `npm run build`; output: `dist`. The included `vercel.json` handles client routes and response headers. Never commit `.env` or credentials.
+Source repository: **https://github.com/moosey-sys/moosey-portfolio-v2** (private). The `main` branch is connected to the existing Vercel project for automatic production deployments. Framework: Vite; build: `npm run build`; output: `dist`. The included `vercel.json` handles client routes and response headers. Never commit `.env` or credentials.
 
 ## Content
 
