@@ -43,6 +43,7 @@ Source repository: **https://github.com/moosey-sys/moosey-portfolio-v2** (privat
 | Theme transition / matching favicon | Five palettes, circular reveal with View Transitions where supported, local persistence, updated favicon |
 | Automatic atmosphere | Optional scroll-driven light/dark mode |
 | Magnetic / hover interactions | Magnetic calls to action, project tilt, arrows, rolling social text |
+| Employer logo motion | Official CB Bank, NTT DATA, Tiny Equations and Candellar logos with gentle floating, hover tilt, and reduced-motion support |
 | Dashboard preview tabs / screenshot themes | Four Guru tabs, accessible arrow-key navigation, light/dark screenshots |
 | Image viewer / case studies | Native modal dialogs with focus restoration and Escape dismissal |
 | Animated counters | Verified Guru counts: 10 public pages, 4 workspaces, 2 languages |
