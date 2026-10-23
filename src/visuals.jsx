@@ -10,6 +10,7 @@ import {
   Send,
 } from "lucide-react";
 import { skills, photos, profile } from "./data";
+import { skillIcons } from "./skill-icons";
 
 export function FluidPortrait({ paused }) {
   const wrap = useRef(null);
@@ -109,6 +110,11 @@ export function SkillCloud({ paused }) {
   useEffect(() => {
     const el = canvas.current,
       ctx = el.getContext("2d");
+    const icons = Object.fromEntries(skills.map(label => {
+      const img = new Image();
+      img.src = `/assets/skills/${skillIcons[label]}.svg`;
+      return [label, img];
+    }));
     let frame,
       rotation = { x: 0.1, y: 0 },
       drag = false,
@@ -145,7 +151,7 @@ export function SkillCloud({ paused }) {
       }
       ctx.clearRect(0, 0, size, size);
       const radius = size * 0.32;
-      ctx.strokeStyle = "#b4c2a01c";
+      ctx.strokeStyle = "#899b7145";
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.ellipse(
@@ -175,25 +181,32 @@ export function SkillCloud({ paused }) {
         })
         .sort((a, b) => a.z - b.z);
       projected.forEach((p) => {
-        ctx.globalAlpha = 0.3 + (p.z + 1) * 0.35;
+        ctx.globalAlpha = 0.45 + (p.z + 1) * 0.275;
         ctx.font = `${Math.max(9, 12 * p.scale)}px 'DM Mono',monospace`;
-        const width = ctx.measureText(p.label).width + 19;
-        ctx.fillStyle = p.label === selected ? "#dd8054" : "#303b2b";
+        const iconSize = 21 * p.scale;
+        const width = ctx.measureText(p.label).width + iconSize + 25;
+        ctx.fillStyle = p.label === selected ? "#f8d8c5" : "#ffffff";
         ctx.strokeStyle = "#899b7150";
         ctx.beginPath();
         ctx.roundRect(
           p.px - width / 2,
-          p.py - 13 * p.scale,
+          p.py - 17 * p.scale,
           width,
-          26 * p.scale,
+          34 * p.scale,
           5,
         );
         ctx.fill();
         ctx.stroke();
-        ctx.fillStyle = p.label === selected ? "#172012" : "#dbe2cf";
-        ctx.textAlign = "center";
+        const icon = icons[p.label];
+        if (icon.complete && icon.naturalWidth) {
+          const ratio = Math.min(iconSize / icon.naturalWidth, iconSize / icon.naturalHeight);
+          const iw = icon.naturalWidth * ratio, ih = icon.naturalHeight * ratio;
+          ctx.drawImage(icon, p.px - width / 2 + 8 + (iconSize-iw)/2, p.py-ih/2, iw, ih);
+        }
+        ctx.fillStyle = "#263023";
+        ctx.textAlign = "left";
         ctx.textBaseline = "middle";
-        ctx.fillText(p.label, p.px, p.py);
+        ctx.fillText(p.label, p.px - width / 2 + iconSize + 16, p.py);
       });
       ctx.globalAlpha = 1;
     };

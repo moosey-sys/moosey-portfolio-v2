@@ -862,7 +862,7 @@ function App() {
             </div>
           )}
         </section>
-        <section className="studio section" id="studio" data-scene="night">
+        <section className="studio section" id="studio" data-scene="paper">
           <div className="section-label">
             <span>A CLOSER LOOK / GURU</span>
             <span>THE OTHER HALF OF THE EXPERIENCE</span>
@@ -1117,7 +1117,7 @@ function App() {
           </div>
         </section>
         <PersonalStory onPhoto={(photo)=>openModal({photo})} />
-        <section className="stack section" id="stack" data-scene="night">
+        <section className="stack section" id="stack" data-scene="paper">
           <div className="section-label">
             <span>04 / MY TOOLKIT</span>
             <span>THE RIGHT TOOL. THE RIGHT REASON.</span>

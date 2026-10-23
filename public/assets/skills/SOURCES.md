@@ -1,0 +1,2 @@
+Brand artwork sourced from https://github.com/devicons/devicon (MIT) and https://github.com/simple-icons/simple-icons (CC0). Trademarks belong to their owners. CI/CD uses a generic pipeline symbol because it is a practice, not a vendor.
+Zabbix compact logo: https://git.zabbix.com/projects/ZBX/repos/zabbix/browse/sass/img/zabbix-logo-compact.svg (Zabbix). Windows Server uses the Microsoft Windows family mark. Fortinet uses the Simple Icons mark in brand red.

@@ -1217,8 +1217,6 @@ header.nav-hidden {
   margin-top: 25px;
   color: #79927a;
 }
-.studio,
-.stack,
 .contact {
   background: var(--night);
   color: #eeeae0;
@@ -1238,7 +1236,7 @@ header.nav-hidden {
 }
 .studio .display em,
 .stack .display em {
-  color: #b5c1a5;
+  color: var(--accent);
 }
 .studio-layout {
   display: grid;
@@ -1264,8 +1262,8 @@ header.nav-hidden {
   color: var(--muted);
 }
 .tabs button[aria-selected="true"] {
-  color: #f7e8d8;
-  border-color: #ed8456;
+  color: var(--ink);
+  border-color: var(--accent);
 }
 .studio-copy h3 {
   font-family: "Instrument Serif";
@@ -1281,7 +1279,7 @@ header.nav-hidden {
   display: block;
   font-size: 6.5px;
   margin-top: 24px;
-  color: #a7b79f;
+  color: var(--muted);
 }
 .admin-preview {
   padding: 10px;
@@ -1599,7 +1597,7 @@ header.nav-hidden {
   padding: 20px 0;
 }
 .stack-group > svg {
-  color: #b6c6a6;
+  color: var(--accent);
   width: 20px;
   margin-top: 4px;
 }
@@ -1624,7 +1622,7 @@ header.nav-hidden {
   touch-action: pan-y;
 }
 .skill-cloud-wrap > .mono {
-  color: #b6c6a6;
+  color: var(--muted);
   font-size: 8px;
 }
 .skill-accessible {
