@@ -45,6 +45,7 @@ import {
   Presence,
 } from "./visuals";
 import "./style.css";
+import { EngineeringStory, CaseStory, PersonalStory } from "./story";
 gsap.registerPlugin(ScrollTrigger);
 const Icon = ({ name, ...props }) => {
   const I = { cloud: Cloud, code: Code2, server: Server }[name] || ArrowUpRight;
@@ -631,14 +632,15 @@ function App() {
           </div>
           <div className="hero-lower">
             <div className="hero-copy">
+              <div className="hero-identity mono">SYSTEMS & CLOUD ENGINEER · FULL-STACK DEVELOPER</div>
               <div className="role-line" key={role}>
                 <span className="status-dot" />
                 {roles[role]}
               </div>
               <p>
-                I connect the things you see
+                I build thoughtful applications
                 <br />
-                with the systems you depend on.
+                and the systems that keep them running.
               </p>
               <a
                 className="round-cta magnetic"
@@ -653,6 +655,7 @@ function App() {
                   <ArrowDown size={22} />
                 </span>
               </a>
+              <a className="hero-story-link" href="#approach">How I think, build, and contribute <ArrowUpRight size={16}/></a>
             </div>
             <div className="hero-art">
               <div className="orbit-label mono">
@@ -723,6 +726,7 @@ function App() {
             </p>
           </div>
         </section>
+        <EngineeringStory />
         <section className="work-section" id="work" data-scene="paper">
           <div className="section work-heading">
             <div className="section-label">
@@ -968,6 +972,7 @@ function App() {
             </div>
           </div>
         </section>
+        <CaseStory />
         <section className="about section" id="about" data-scene="paper">
           <div className="section-label">
             <span>02 / THE HUMAN</span>
@@ -1111,6 +1116,7 @@ function App() {
             </div>
           </div>
         </section>
+        <PersonalStory onPhoto={(photo)=>openModal({photo})} />
         <section className="stack section" id="stack" data-scene="night">
           <div className="section-label">
             <span>04 / MY TOOLKIT</span>

@@ -189,4 +189,7 @@ export const photos = [
   { src: "mono.webp", label: "A quieter moment." },
   { src: "explore.webp", label: "Chasing the first light." },
   { src: "off-duty.webp", label: "Off duty." },
+  { src: "aquarium.jpeg", label: "A different perspective." },
+  { src: "graduation.jpeg", label: "A chapter worth celebrating." },
+  { src: "city.jpeg", label: "Life, in motion." },
 ];

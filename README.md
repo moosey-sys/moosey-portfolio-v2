@@ -24,6 +24,7 @@ Source repository: **https://github.com/moosey-sys/moosey-portfolio-v2** (privat
 - `src/data.js`: profile, verified career dates, projects, skills, photos.
 - `src/main.jsx`: page structure and interaction state.
 - `src/visuals.jsx`: GPU portrait distortion, Three.js project orbit, skill cloud, infinite photo canvas, visitor presence.
+- `src/story.jsx` and `src/story.css`: Build / Operate / Teach perspectives, keyboard-accessible engineering map, Guru case study, personal photo story, and dated Now note. Update the Now note when current roles change.
 - `src/style.css`: responsive design, five themes, reduced-motion behavior.
 - `public/Win-Min-Thaw-CV.pdf`: supplied résumé.
 - `public/assets`: optimized original personal photographs and Guru interface captures.

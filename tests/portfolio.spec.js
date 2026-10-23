@@ -28,7 +28,7 @@ test("project exploration, accessible tabs, themes and motion work", async ({
   );
   await page.getByRole("button", { name: "Close preview" }).click();
   await page.getByRole("tab", { name: "02 enquiries" }).click();
-  await expect(page.getByRole("tabpanel")).toContainText("Every conversation");
+  await expect(page.locator("#dashboard-panel")).toContainText("Every conversation");
   await page.getByRole("tab", { name: "02 enquiries" }).press("ArrowRight");
   await expect(page.getByRole("tab", { name: "03 news" })).toHaveAttribute(
     "aria-selected",
